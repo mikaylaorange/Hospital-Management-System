@@ -1,8 +1,11 @@
 # Hospital Management System
 
-To run:
+## To run:
+
 $ cd skeleton
+
 $ source activate.sh
+
 $ flask run
 
  
