@@ -1,54 +1,64 @@
 -- CREATE TABLE IF NOT EXISTS Sailors (
---   sid SERIAL8 PRIMARY KEY,
+--   sid INTEGER PRIMARY KEY AUTOINCREMENT,
 --   name TEXT,
---   age BIGINT,
---   experience BIGINT -- years of experience
+--   age INTEGER,
+--   experience INTEGER -- years of experience
 -- );
 
 -- CREATE TABLE IF NOT EXISTS Boats (
---   bid SERIAL8 PRIMARY KEY,
+--   bid INTEGER PRIMARY KEY AUTOINCREMENT,
 --   name TEXT,
 --   color TEXT
 -- );
 
 -- CREATE TABLE IF NOT EXISTS Voyages (
---   sid BIGINT NOT NULL,
---   bid BIGINT NOT NULL,
+--   sid INTEGER NOT NULL,
+--   bid INTEGER NOT NULL,
 --   date_of_voyage DATE NOT NULL,
 --   PRIMARY KEY(sid, bid, date_of_voyage)
 -- );
 
+
 CREATE TABLE IF  NOT EXISTS Hospital (
-  hospitalID SERIAL8 PRIMARY KEY,
+  hospitalID INTEGER PRIMARY KEY AUTOINCREMENT,
   hospitalName TEXT,
   hospitalCity TEXT,
   hospitalState TEXT,
   hospitalCountry TEXT
 );
 CREATE TABLE IF NOT EXISTS Patient (
-  patientID BIGINT PRIMARY KEY,
+  patientID BIGINT PRIMARY KEY AUTOINCREMENT,
   firstName TEXT,
   lastName TEXT,
-  DoB DATE NOT NULL
+  DoB DATE NOT NULL,
   email TEXT
 );
 CREATE TABLE IF NOT EXISTS Department (
-  departmentID SERIAL8 PRIMARY KEY
+  departmentID INTEGER PRIMARY KEY AUTOINCREMENT,
   departmentName TEXT
 );
 
 CREATE TABLE IF NOT EXISTS Doctor (
-  doctorID BIGINT PRIMARY KEY,
+  doctorID INTEGER PRIMARY KEY AUTOINCREMENT,
   firstName TEXT,
   lastName TEXT,
-  FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
+  departmentID REFERENCES Department(departmentID),
   practiceSince DATE NOT NULL,
-  FOREIGN KEY (hospitalID) REFERENCES Hospital(hospitalID),
+  hospitalID REFERENCES Hospital(hospitalID),
 );
 CREATE TABLE IF NOT EXISTS Office (
-  officeID BIGINT PRIMARY KEY,
-  FOREIGN KEY (doctorID) REFERENCES Doctor(doctorID),
-  officeDays TEXT
+  officeID INTEGER PRIMARY KEY AUTOINCREMENT,
+  doctorID REFERENCES Doctor(doctorID),
+  officeDays TEXT,
+  hourStart TIME,
+  hourEnd TIME,
+  apptDuration BIGINT
 
 );
-
+CREATE TABLE IF NOT EXISTS Appointments (
+  appointmentID INTEGER PRIMARY KEY AUTOINCREMENT,
+  patientID REFERENCES Patient(patientID),
+  officeID REFERENCES Office(officeID),
+  apptDate DATE,
+  apptTime TIME
+);

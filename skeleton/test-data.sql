@@ -24,7 +24,7 @@
 --   (3, 3, '2020-02-01');
 
 INSERT INTO Hospital
-  (hospitalName, city, state, country)
+  (hospitalName, hospitalCity, hospitalState, hospitalCountry)
 VALUES
   ('County General Hospital','Chicago', 'IL', 'USA'),
   ('Sacred Heart Hospital','Honolulu', 'HI', 'USA'),
