@@ -38,26 +38,26 @@ CREATE TABLE IF NOT EXISTS Department (
   departmentName TEXT
 );
 
--- CREATE TABLE IF NOT EXISTS Doctor (
---   doctorID INTEGER PRIMARY KEY AUTOINCREMENT,
---   firstName TEXT,
---   lastName TEXT,
---   departmentID REFERENCES Department(departmentID),
---   practiceSince DATE NOT NULL,
---   hospitalID REFERENCES Hospital(hospitalID),
--- );
--- CREATE TABLE IF NOT EXISTS Office (
---   officeID INTEGER PRIMARY KEY AUTOINCREMENT,
---   doctorID REFERENCES Doctor(doctorID),
---   officeDays TEXT,
---   hourStart TIME,
---   hourEnd TIME,
---   apptDuration INTEGER
--- );
--- CREATE TABLE IF NOT EXISTS Appointments (
---   appointmentID INTEGER PRIMARY KEY AUTOINCREMENT,
---   patientID REFERENCES Patient(patientID),
---   officeID REFERENCES Office(officeID),
---   apptDate DATE,
---   apptTime TIME
--- );
+CREATE TABLE IF NOT EXISTS Doctor (
+  doctorID INTEGER PRIMARY KEY AUTOINCREMENT,
+  firstName TEXT,
+  lastName TEXT,
+  departmentID REFERENCES Department(departmentID),
+  practiceSince DATE NOT NULL,
+  hospitalID REFERENCES Hospital(hospitalID)
+);
+CREATE TABLE IF NOT EXISTS Office (
+  officeID INTEGER PRIMARY KEY AUTOINCREMENT,
+  doctorID REFERENCES Doctor(doctorID),
+  officeDays TEXT,
+  hourStart TIME,
+  hourEnd TIME,
+  apptDuration INTEGER
+);
+CREATE TABLE IF NOT EXISTS Appointments (
+  appointmentID INTEGER PRIMARY KEY AUTOINCREMENT,
+  patientID REFERENCES Patient(patientID),
+  officeID REFERENCES Office(officeID),
+  apptDate DATE,
+  apptTime TIME
+);
