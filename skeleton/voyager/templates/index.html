@@ -7,13 +7,20 @@
     <ol>
       <li><a href="/hospital/add">Add a Hospital</a></li>
       <li><a href="/departments/add">Add a Department</a></li>
-      <li><a href="/voyages/add">add a voyage</a></li>
+      <li><a href="/doctors/add">Add a Doctor</a></li>
     </ol>
     <h1>All available resources</h1>
     <ol>
       <li><a href="/hospitals">Hospitals</a></li>
       <li><a href="/departments">Departments</a></li>
-      <li><a href="/voyages">voyages</a></li>
+      <li><a href="/doctors">Doctors</a></li>
+      <li><a href="/patients">Patients</a></li>
+      <li>
+        <form action="/patients/add" method=POST>
+          <label>New Patient?</label>
+          <input type=submit value="Create Profile"/>
+        </form>
+      </li>
       <li>
         <form action="/sailors/who-sailed" method=POST>
           <label>boat name</label>
