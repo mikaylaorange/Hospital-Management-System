@@ -3,7 +3,7 @@ from flask import Blueprint
 
 from voyager.views import index
 from voyager.views import hospitals
-from voyager.views import boats
+from voyager.views import departments
 from voyager.views import voyages
 from voyager.views import find_sailors
 from voyager.views import find_boats
@@ -12,15 +12,15 @@ from voyager.views import find_colors
 from voyager.views import find_popular
 from voyager.views import add_hospital
 from voyager.views import add_voyage
-from voyager.views import add_boat
+from voyager.views import add_department
 
 
 blueprint = Blueprint('views', __name__)
 index.views(blueprint)
 find_date.views(blueprint)
 hospitals.views(blueprint)
-boats.views(blueprint)
-add_boat.views(blueprint)
+departments.views(blueprint)
+add_department.views(blueprint)
 add_voyage.views(blueprint)
 voyages.views(blueprint)
 add_hospital.views(blueprint)
