@@ -50,3 +50,35 @@ VALUES
   ('NICU'),
   ('Radiology'),
   ('OR');
+
+INSERT INTO  Office 
+(doctorID,officeDays,hourStart,hourEnd,apptDuration)
+VALUES
+
+(3,'MTWRF',540,1020,1),
+(4,'W',540,1020,2),
+(5,'MT',540,1020,1);
+
+INSERT INTO Appointments
+(patientID,officeID,apptDate,apptTime)
+VALUES
+(1,2,'01/23/2020',600),
+(2,1,'01/23/2020',600),
+(3,3,'01/23/2020',600),
+(4,4,'01/23/2020',600),
+(5,5,'01/23/2020',600);
+
+INSERT INTO Doctor 
+(firstName,lastName,departmentID,practiceSince,hospitalID)
+VALUES
+('Jared','Kushner',1,'01/11/1980',3),
+('Jillian','Michaels',5,'02/01/2000',10),
+('Keisha','Lance-Bottoms',3,'11/03/1989',1),
+('Seokjin','Kim',4,'05/20/2010',4),
+('Justin','Jeon',10,'09/13/2011',7),
+('Hardy','Davis',2,'09/12/1997',5),
+('Hannah','Montana',2,'12/04/1992',8)
+
+
+
+  
