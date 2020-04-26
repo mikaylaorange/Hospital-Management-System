@@ -11,10 +11,8 @@ def doctors(conn):
     return execute(conn, "SELECT Doctor.firstName as 'First Name',Doctor.lastName as 'Last Name', Department.departmentName as Department FROM Department INNER JOIN Doctor on Department.departmentID = Doctor.departmentID")
 
 
-
-
 def views(bp):
-    @bp.route("/doctor")
+    @bp.route("/doctors")
     def _doctors():
         with get_db() as conn:
             rows = doctors(conn)
