@@ -10,7 +10,7 @@ from voyager.validate import validate_field, render_errors
 from voyager.validate import NAME_RE, INT_RE, DATE_RE
 
 def hospitals(conn):
-    return execute(conn, "SELECT h.hospitalID AS ID, h.hospitalName AS Name, h.hospitalCity AS City, h.hospitalState AS State, h.hospitalCountry AS Country FROM Hospital AS h")
+    return execute(conn, "SELECT h.hospitalName AS Name, h.hospitalCity AS City, h.hospitalState AS State, h.hospitalCountry AS Country FROM Hospital AS h")
 
 def views(bp):
 
