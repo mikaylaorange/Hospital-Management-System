@@ -8,7 +8,7 @@ from flask import escape
 from voyager.db import get_db, execute
 
 def departments(conn):
-    return execute(conn, "SELECT d.departmentName as Type FROM Department AS d")
+    return execute(conn, "SELECT d.departmentID as ID, d.departmentName as Type FROM Department AS d")
 
 
 

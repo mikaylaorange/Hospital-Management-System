@@ -7,39 +7,25 @@
     <ol>
       <li><a href="/hospital/add">Add a Hospital</a></li>
       <li><a href="/departments/add">Add a Department</a></li>
-      <li><a href="/voyages/add">add a voyage</a></li>
+      <li><a href="/doctors/add">Add a Doctor</a></li>
     </ol>
     <h1>All available resources</h1>
     <ol>
       <li><a href="/hospitals">Hospitals</a></li>
       <li><a href="/departments">Departments</a></li>
-      <li><a href="/doctor">Doctors</a></li>
+      <li><a href="/doctors">Doctors</a></li>
+      <li><a href="/patients">Existing Patients</a></li>
       <li>
-        <form action="/sailors/who-sailed" method=POST>
-          <label>boat name</label>
-          <input name="boat-name"/>
-          <input type=submit value="sailors who sailed boat"/>
+        <form action="/patients/add" method=POST>
+          <label>New Patient?</label>
+          <input type=submit value="Create Profile"/>
         </form>
       </li>
       <li>
-        <form action="/boats/sailed-by" method=POST>
-          <label>sailor name</label>
-          <input name="sailor-name"/>
-          <input type=submit value="boats sailed by"/>
-        </form>
-      </li>
-      <li>
-        <form action="/sailors/who-sailed-on-date" method=POST>
-          <label>date</label>
-          <input name="date"/>
-          <input type=submit value="sailors who sailed on date"/>
-        </form>
-      </li>
-      <li>
-        <form action="/sailors/who-sailed-on-boat-of-color" method=POST>
-          <label>color</label>
-          <input name="color"/>
-          <input type=submit value="sailors who sailed on boat of color"/>
+        <form action="/hospitals/what-state" method=POST>
+          <label>State Initals</label>
+          <input name="state_"/>
+          <input type=submit value="Find Hospitals in State"/>
         </form>
       </li>
       <li><a href="/boats/by-popularity">boats by popularity</a></li>

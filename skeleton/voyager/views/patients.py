@@ -5,14 +5,14 @@ from flask import request
 
 from voyager.db import get_db, execute
 
-def voyages(conn):
+def patients(conn):
     return execute(conn, 
-    "SELECT v.sid, v.bid, v.date_of_voyage FROM Voyages AS v")
+    "SELECT p.patientID AS ID, p.firstName, p.lastName, p.DoB, p.email FROM Patient AS p")
 def views(bp):
-    @bp.route("/voyages")
-    def _voyages():
+    @bp.route("/patients")
+    def _patients():
         with get_db() as conn:
-            rows = voyages(conn)
+            rows = patients(conn)
             for row in rows:
                 print(row)
-        return render_template("table.html", name="voyages", rows=rows)
+        return render_template("table.html", name="Patients", rows=rows)
