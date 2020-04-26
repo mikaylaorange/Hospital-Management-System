@@ -11,7 +11,7 @@ VALUES
   ('Arrowhead Regional Medical Center','San Bernardino', 'CA', 'USA'),
   ('Howard University Hospital','Chicago', 'IL', 'USA'),
   ('Keck Hospital','Los Angeles', 'CA', 'USA'),
-  ('UCSD MEdical Center','San Diego', 'CA', 'USA');
+  ('UCSD Medical Center','San Diego', 'CA', 'USA');
 
   INSERT INTO Department
   (departmentName)
