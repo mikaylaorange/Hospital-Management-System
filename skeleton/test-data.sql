@@ -96,7 +96,7 @@ VALUES
 ('Karter','Phelps','1998-07-02','Phelps32@gmail.com'),
 ('Braylen','George','1957-05-14','BraylenGeorge12@gmail.com'),
 ('Madelynn','Patel','1995-04-30','MPatel53@gmail.com'),
-('Savion','Robbins','2010-05-03,'SavionRobbins@gmail.com'),
+('Savion','Robbins','2010-05-03','SavionRobbins@gmail.com'),
 ('Finley','Johnson','1958-07-16','FinleyJohnson2@gmail.com'),
 ('Jamie','Long','1952-01-20','JLong11@gmail.com'),
 ('Holly','Conley','1998-06-01','HConley75@gmail.com'),
