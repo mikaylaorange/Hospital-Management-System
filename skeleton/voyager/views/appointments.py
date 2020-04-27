@@ -19,4 +19,4 @@ def views(bp):
                 rows = appointments(conn, first,last)
                 for row in rows:
                     print(row)
-            return render_template("table.html", name="Hospitals in this state", rows=rows)
+            return render_template("table.html", name="Appointments by Doctor", rows=rows)
