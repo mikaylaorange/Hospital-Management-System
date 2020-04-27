@@ -6,6 +6,7 @@ from voyager.views import hospitals
 from voyager.views import departments
 from voyager.views import doctors
 from voyager.views import patients
+from voyager.views import appointments
 from voyager.views import add_hospital
 from voyager.views import add_department
 from voyager.views import add_patient
@@ -20,6 +21,7 @@ hospitals.views(blueprint)
 departments.views(blueprint)
 doctors.views(blueprint)
 patients.views(blueprint)
+appointments.views(blueprint)
 # find_sailors.views(blueprint)
 # find_popular.views(blueprint)
 add_hospital.views(blueprint)
