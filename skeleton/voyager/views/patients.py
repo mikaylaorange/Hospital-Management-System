@@ -7,7 +7,7 @@ from voyager.db import get_db, execute
 
 def patients(conn):
     return execute(conn, 
-    "SELECT p.patientID AS ID, p.firstName, p.lastName, p.DoB, p.email FROM Patient AS p")
+    "SELECT p.firstName, p.lastName, p.DoB, p.email FROM Patient AS p")
 def views(bp):
     @bp.route("/patients")
     def _patients():

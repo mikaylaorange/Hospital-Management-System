@@ -50,9 +50,9 @@ CREATE TABLE IF NOT EXISTS Office (
   officeID INTEGER PRIMARY KEY AUTOINCREMENT,
   doctorID REFERENCES Doctor(doctorID),
   officeDays TEXT,
-  hourStart TIME,
-  hourEnd TIME,
-  apptDuration BIGINT
+  hourStart INTEGER,
+  hourEnd INTEGER,
+  apptDuration INTEGER
 
 );
 CREATE TABLE IF NOT EXISTS Appointments (
@@ -60,5 +60,5 @@ CREATE TABLE IF NOT EXISTS Appointments (
   patientID REFERENCES Patient(patientID),
   officeID REFERENCES Office(officeID),
   apptDate DATE,
-  apptTime TIME
+  apptTime INTEGER
 );
