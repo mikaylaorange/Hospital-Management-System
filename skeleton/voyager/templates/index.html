@@ -8,6 +8,9 @@
       <li><a href="/hospital/add">Add a Hospital</a></li>
       <li><a href="/departments/add">Add a Department</a></li>
       <li><a href="/doctors/add">Add a Doctor</a></li>
+      <li><a href="/appointments/add">Add a Appointment</a></li>
+      <li><a href="/patients/add">Add a patient</a></li>
+
     </ol>
     <h1>All available resources</h1>
     <ol>
@@ -15,12 +18,7 @@
       <li><a href="/departments">Departments</a></li>
       <li><a href="/doctors">Doctors</a></li>
       <li><a href="/patients">Existing Patients</a></li>
-      <li>
-        <form action="/patients/add" method=POST>
-          <label>New Patient?</label>
-          <input type=submit value="Create Profile"/>
-        </form>
-      </li>
+
       <li>
         <form action="/hospitals/what-state" method=POST>
           <label>State Initals</label>
@@ -36,7 +34,6 @@
           <input type=submit value="Find an appointment by doctor"/>
         </form>
       </li>
-      <li><a href="/boats/by-popularity">boats by popularity</a></li>
     </ol>
   </body>
 </html>

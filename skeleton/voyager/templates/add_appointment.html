@@ -1,0 +1,30 @@
+<form action='/appointments/add' method=POST>
+    <body style ="background-color:papayawhip">
+      <li>
+          <form>
+            <label>Enter Patient ID.</label>
+            <input name="pID"/>
+          </form>
+        </li>
+        <li>
+          <form>
+            <label>Enter office ID.</label>
+            <input name="oID"/>
+          </form>
+        </li>
+        <li>
+          <form>
+            <label>Enter the date in YYYY-MM-DD format.</label>
+            <input name="date"/>
+          </form>
+        </li>
+        <li>
+          <form>
+            <label>Enter the time in hhmm format (ex: 6:00 am -> 600)</label>
+            <input name="time"/>
+          </form>
+        </li>
+
+        <input type=submit value="Add Appointment"/>
+      </body>
+      </form>
