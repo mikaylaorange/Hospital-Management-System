@@ -7,7 +7,7 @@ from flask import Flask, redirect
 
 from voyager.db import get_db, execute
 def add_patient(conn,firstName, lastName, DoB, email):
-    return execute(conn, f"INSERT INTO Doctor(firstName, lastName, DoB, email) VALUES ('{firstName}','{lastName}','{DoB}','{email}')")
+    return execute(conn, f"INSERT INTO Patient(firstName, lastName, DoB, email) VALUES ('{firstName}','{lastName}','{DoB}','{email}')")
 
 def views(bp):
     @bp.route("/patients/add",methods=['GET','POST'])
